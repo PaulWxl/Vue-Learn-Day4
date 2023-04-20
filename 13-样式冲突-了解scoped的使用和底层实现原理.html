@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 6. 组件之间的样式冲突问题  默认情况下，写在.vue 组件中的样式会 全局生效 ，因此很容易造成多个组件之间的样式冲突问题。
+        导致组件之间样式冲突的根本原因是：
+        ①单页面应用程序中，所有组件的DOM 结构，都是基于唯一的index.html 页面进行呈现的
+        ②每个组件中的样式，都会影响整个index.html 页面中的DOM 元素 -->
+
+
+
+
+    <!-- 6.1 思考：如何解决组件样式冲突的问题   为每个组件分配唯一的   自定义属性(data- xxxxx)，在编写组件样式时，通过  属性选择器  来控制样式的作用域，示例代码如下： 
+    
+
+        <template>
+            //保证 每一个 组件 都有 唯一的 data-v-001 
+            <div class="container" data-v-001> 
+                <h3 data-v-001>轮播图组件</h3>
+            </div>
+        </template>
+
+
+    <style>
+        /* 通过 中括号[属性选择器]， 来防止  组件  之间    的  样式冲突  问题，   因为  每个   组件   分配  的   自定义   属性   是    "唯一的" */
+        
+        .container[data-v-001] {
+            border: 1px solid red;
+        }
+    </style>
+    
+        
+    
+        -->
+
+
+        <!-- 法二：  为了 方便   简写，   可以   给   组件    的 style 加 scoped 属性(固定写法 ) ：  原理 和  法一   是一样的（给  每一个  标签   加一个   data-v-xxx ）     Vue 在  底层  生成   这个   组件   的   时候，    它   会   自动   为   每一个   标签   都   生成  一个   data-v-xxx，    而且   一个   组件   中   共用   一个    data-v-xxx    -->
+    
+</body>
+</html>

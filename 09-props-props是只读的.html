@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 5.1 props 是只读的
+        vue 规定：组件中封装的 自定义属性 props 是只读的，程序员不能直接修改props 的值。否则会直接报错：
+        
+        要想修改props 的值，可以把props 的值转存到data 中，因为data 中的数据都是可读可写的！ 
+    
+        思想： 把 this.init 的 值 赋值 给 count  
+    
+        data() {
+            return {
+                count: this.init // 把 this.init 的 值 赋值(转存) 给 count 
+            }
+        }
+     
+    -->
+
+
+    <!-- 注意， 千万不要写 init++, 控制台 会 报错， 不要 直接 修改 自定义 属性 。 已经 把 init 的 值  赋值  给  了  count，   就  让  count 自增，  count++    先 转存到  data  中  的   某个  数据，  然后 再  修改   这个   数据  的   值！ -->
+</body>
+</html>

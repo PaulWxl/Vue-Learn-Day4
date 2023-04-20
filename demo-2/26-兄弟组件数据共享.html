@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3. 兄弟组件之间的数据共享   在vue2.x中，兄弟组件之间数据共享的方案是EventBus。 
+    
+
+        Left.vue 和 Right.vue  是 兄弟组件
+        首先 确定 发送方 和 接收方。  
+    
+
+
+        要用到eventBus.js: 先导入Vue: import Vue from 'vue',  然后 向外共享 Vue 的 实例对象（为空）： export default new Vue()
+
+        在 发送方 中 先 导入 eventBus.js, 一般 用 bus 接收。 然后 methods 定义  一个  方法，    sendMsg() {
+            里面使用bus.$emit方法
+            bus.$emit()//还是那两个参数
+        }
+
+
+        在 接收方 中  也 先 导入 eventBus.js, 一般 也 用 bus 接收。在 接收方 中 先定义 一个  数据 接收的 值， msgFromLeft,可以 初始化 为 空。  在 created （因为 data 可用了 ）中 给 bus 绑定一个  事件： bus.$on('自定义事件类型', 处理 这个 自定义事件类型 的 程序) 
+
+
+        发送方 和 接收方 都要 导入 eventBus.js 
+    -->
+
+    <!-- eventBus.js 声明在 components 节点 下  -->
+    <!-- 假设Left.vue 为 发送方， Right.vue 为 接收方  -->
+</body>
+</html>

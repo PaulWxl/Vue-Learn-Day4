@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- 4. 组件之间的父子关系 在vue 项目中封装了3 个组件 组件App 组件Left 组件Right 。 组件在被封装好之后，彼此之间是相互独立的，不存在父子关系
+    在项目中使用这三个组件 组件App 组件Left 组件Right  。 在使用组件的时候，根据彼此的嵌套关系，形成了父子关系、兄弟关系 。 
+
+
+    组件 中 在 封装 时 ， 都是 相互独立 的。 只有 在 使用 时， 才会 存在 嵌套关系。   因此 产生  父子组件 ，  兄弟组件。 （父子关系，   兄弟关系）。  -->
+
+
+    <!-- 在 components 中 定义了 Left.vue 和 Right.vue   -->
+
+
+
+    <!-- 4.1 使用组件的三个步骤 
+        App.vue 组件
+        步骤1：在 父组件 中 使用import 语法导入需要的组件（子组件）
+        步骤2：在 script 中 使用components节点注册组件
+        步骤3：在 template 中 通过 标签 的 形式使用刚才注册的组件 
+    
+  
+        <template>
+        <div >
+            <h1>App 根组件 </h1>
+            <Left></Left>
+        </div>
+        </template>
+
+        <script>
+
+        import Left from '@/components/Left.vue'
+
+        export default {
+            components: {
+                Left
+            }
+        }
+        </script>-->
+
+
+    <!-- 在 webpack.config.js 中，配置 @ 的 指向 
+
+
+    module.exports = {
+        resolve: {
+            alias: {
+                @: path.join(__dirname, './src')
+            }
+        }
+    }   
+    现在 vue-cli 已经 配置好了  @ （默认 指向 ./src ）, 可以  直接 使用。 -->
+
+    
+</body>
+</html>

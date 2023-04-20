@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 6.3/deep/ 样式穿透   如果给当前组件的style 节点添加了scoped 属性，则当前组件的样式对其   子组件    是不生效的。如果想让某些样式对     子组件    生效，可以使用/deep/ 深度选择器。 
+    
+    
+    <style lang="less" scoped >
+        // 不加 /deep/ 时， 生成的 选择器 格式  为 .title[data-v-xxxx]  ，  含义 是  选择   具有   data-v-xxxx 属性  的  类名  为  title  的  元素   
+        .title {
+            color: blue
+        }
+
+        // 加上 /deep/ 后， 生成的选择器格式为 [data-v-xxxx] .title ，  是   后代   选择器   写法
+        /deep/ .title {
+            color: blue
+        }
+    </style>
+    
+        /deep/ 使用  场景：  1. 希望  在   父组件   中   直接  更改  子组件  的   样式。  2. 修改 第三方  组件库(vant/elementui )   的  默认样式 。   
+    
+    -->
+
+
+
+
+
+</body>
+</html>

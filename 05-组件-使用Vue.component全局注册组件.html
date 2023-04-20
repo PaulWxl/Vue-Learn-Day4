@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 4.2 通过components 注册的是私有子组件
+        例如：在组件A的components 节点下，注册了组件F。则组件F 只能用在组件A 中；不能被用在组件C 中。
+        请大家思考两个问题：①为什么F 不能用在组件C 中？②怎样才能在组件C 中使用F？ -->
+
+
+    <!-- 安装 vetur 插件， 快速 初始化 组件 : 尖括号 + 选中第一个。  
+    
+    
+    
+    4.3 注册全局组件 在vue 项目的main.js 入口文件中，通过Vue.component() 方法，可以注册全局组件。示例代码如下：
+
+
+
+        // 注意， 写的位置！！！ 
+
+        // 导入 需要 全局注册 的 组件 
+        import Count from '@/components/Count.vue'
+
+
+        // 参数1： 字符串格式， 表示组件的“注册名称” ， 这个名字， 就是 template 中 的 标签名。 
+        // 参数2： 需要被全局注册的那个组件 
+        Vue.component('MyCount', Count)
+
+
+    全局组件： 在 webpack 打包 的 入口文件 中 ， 配置 全局组件， 那么 就可以 在 所有的 组件 中， 都可以  访问到 这个 组件。 好处： 一次 注册，  到处  使用。 
+    反复 频繁 使用 的 组件 才 适合 被 定义 为 全局 组件。   如果  一个  组件 只是  偶尔  被 使用， 那么    私有注册（在  某个  组件 中  单独  注册。 ）  也可以。   
+    -->
+</body>
+</html>
